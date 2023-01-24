@@ -1,0 +1,49 @@
+
+  table
+  {
+      width: 100%;
+      border-collapse: collapse;
+      border-color: black;
+  }
+    
+  td 
+  {
+      width: 25%;
+      /* border: 1px solid red; */
+      text-align: center;
+  }
+  
+  .equipe .nomeq 
+  {
+      max-width: 4cm;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid rgb(0, 0, 0);
+  }
+    
+  .sepl, .sepr, .sep2l, .sep2r 
+  {
+      height: 10px;
+  }
+
+  .sepl 
+  {
+      border-right: 2px solid rgb(0, 0, 0);
+      border-bottom: 2px solid rgb(0, 0, 0);
+  }
+    
+  .sepr
+  {
+      border-left: 2px solid rgb(0, 0, 0);
+      border-bottom: 2px solid rgb(0, 0, 0);
+  }
+    
+  .sep2l 
+  {
+      border-left: 2px solid rgb(0, 0, 0);
+  }
+    
+  .sep2r
+  {
+      border-right: 2px solid rgb(0, 0, 0);
+  }

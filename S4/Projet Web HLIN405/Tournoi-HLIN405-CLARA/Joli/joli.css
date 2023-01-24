@@ -1,0 +1,137 @@
+body{
+    overflow-x: hidden; /* surtout pas enlever, permet de ne pas avoir de barre de scrolle horizontale */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+    
+footer {
+    position:absolute; 
+    bottom:0; /* colle le footer en bas de page, ne pas enlever */
+    width: 100%;
+    padding-top: 30px;
+    background-color: black;
+    color:white;
+}
+
+#main {
+    min-height: 100vh;
+    position: relative;
+}
+
+#contenu{
+    
+    padding-bottom: 147px; /* solution un peu rapide, permet au texte de ne pas être superposé par le footer */
+    min-height: 80vh;
+}
+
+#profil:after{
+    border:none !important;
+}
+
+#textetourne{
+    background-color: rgb(248, 248, 80);
+    padding-top: 0.2%;
+}
+
+
+#images {
+    background-color: white;
+    text-align: center;
+    max-height : 10%;
+}
+
+.navbar{
+    background-color: #333333;
+}
+
+
+#log{
+    position: absolute;
+    left: -50px;
+}
+
+#myHeader{
+    z-index:9999;
+}
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 102%;
+  }
+
+  .sticky + .container {
+    padding-top: 103px;
+  }
+  
+
+#mapid {    
+    position:inherit; 
+    height: 600px; 
+    /*width : 1250px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+#mapid2 {     
+    height: 400px;
+    width:400px;
+    margin-left: 0;
+}
+    
+
+#lien {
+    color: white;
+    text-decoration: none;
+}    
+
+#imMap{
+    height: 150px;
+    width: auto;
+}
+
+#icone{
+    height: 30px;
+    width: auto;
+}
+
+#sepMap{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#con_log{
+    border-right: 1px solid #333;
+}
+
+#carousel img{
+    height:350px;
+}
+
+#step{
+    color : white;
+}
+
+.mail {
+    color: black;
+    text-decoration: none;
+}
+
+.carousel-caption{
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.ref{
+    color: black;
+}
+
+.card-body{
+    background: linear-gradient(to left, #aeacac, transparent);
+}
+
