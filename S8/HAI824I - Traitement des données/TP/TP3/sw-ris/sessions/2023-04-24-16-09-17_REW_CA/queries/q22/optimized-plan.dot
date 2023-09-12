@@ -1,0 +1,9 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogSkolemFunctionCall
+(<http://www.imdb.com/title/{0}>, \"{1}\")" , color = blue] ; 
+1 [label="LogSQLEval 
+SELECT DISTINCT tab_12.tconst, tab_12.primarytitle FROM title AS tab_12, title AS tab_13 WHERE tab_13.startYear = '1977' AND tab_12.tconst = tab_13.tconst", color = blue] ; 
+0 -> 1 ; 
+}
+

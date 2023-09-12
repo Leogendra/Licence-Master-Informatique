@@ -1,0 +1,102 @@
+digraph  g{ graph[label = "16:24:5.227"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="HashDistinct", color = yellow] ; 
+1 [label="Union", color = yellow] ; 
+0 -> 1 ; 
+2 [label="BindAccessEval", color = yellow] ; 
+1 -> 2 ; 
+3 [label="BindAccessEval", color = yellow] ; 
+2 -> 3 ; 
+4 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship'
+3", color = yellow] ; 
+3 -> 4 ; 
+5 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+3 -> 5 ; 
+6 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/Vehicle>\")}", color = yellow] ; 
+2 -> 6 ; 
+8 [label="BindAccessEval", color = yellow] ; 
+1 -> 8 ; 
+9 [label="BindAccessEval", color = yellow] ; 
+8 -> 9 ; 
+10 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship' OR vehicleType = 'podracer'
+4", color = yellow] ; 
+9 -> 10 ; 
+11 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+9 -> 11 ; 
+12 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/Vehicle>\")}", color = yellow] ; 
+8 -> 12 ; 
+14 [label="BindAccessEval", color = yellow] ; 
+1 -> 14 ; 
+15 [label="BindAccessEval", color = yellow] ; 
+14 -> 15 ; 
+16 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship'
+3", color = yellow] ; 
+15 -> 16 ; 
+17 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+15 -> 17 ; 
+18 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}", color = yellow] ; 
+14 -> 18 ; 
+20 [label="BindAccessEval", color = yellow] ; 
+1 -> 20 ; 
+21 [label="BindAccessEval", color = yellow] ; 
+20 -> 21 ; 
+22 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship' OR vehicleType = 'podracer'
+4", color = yellow] ; 
+21 -> 22 ; 
+23 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+21 -> 23 ; 
+24 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}", color = yellow] ; 
+20 -> 24 ; 
+26 [label="BindAccessEval", color = yellow] ; 
+1 -> 26 ; 
+27 [label="BindAccessEval", color = yellow] ; 
+26 -> 27 ; 
+28 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship' OR vehicleType = 'podracer'
+4", color = yellow] ; 
+27 -> 28 ; 
+29 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+27 -> 29 ; 
+30 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+26 -> 30 ; 
+32 [label="BindAccessEval", color = yellow] ; 
+1 -> 32 ; 
+33 [label="BindAccessEval", color = yellow] ; 
+32 -> 33 ; 
+34 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship'
+3", color = yellow] ; 
+33 -> 34 ; 
+35 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+33 -> 35 ; 
+36 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+32 -> 36 ; 
+}
+

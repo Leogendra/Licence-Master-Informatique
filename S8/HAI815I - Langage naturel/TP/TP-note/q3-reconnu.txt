@@ -1,0 +1,2 @@
+?- s([des,herisson,qui,horripilent,une,hermine,hurlent],[]).
+true 

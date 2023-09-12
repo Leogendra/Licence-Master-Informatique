@@ -1,0 +1,3 @@
+<$x,$z> :- 
+	triple($x,<https://www.starwars.com/databank/pilotOf>,$z),
+	triple($z,<http://www.w3.org/2000/01/rdf-schema#subClassOf>,<https://www.starwars.com/databank/Vehicle>);

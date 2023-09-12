@@ -1,0 +1,19 @@
+digraph  g{ graph[label = "15:56:49.116"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="HashDistinct", color = yellow] ; 
+1 [label="BindAccessEval", color = yellow] ; 
+0 -> 1 ; 
+2 [label="BindAccessEval", color = yellow] ; 
+1 -> 2 ; 
+3 [label="SQLQuery
+SELECT character, saber 
+FROM lightsaber
+8", color = yellow] ; 
+2 -> 3 ; 
+4 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>, <https://www.starwars.com/databank/{1}>)", color = yellow] ; 
+2 -> 4 ; 
+5 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/LightSaber>\")}", color = yellow] ; 
+1 -> 5 ; 
+}
+

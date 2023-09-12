@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TP3 - Fragements, Services</string>
+    <string name="titre_formulaire">Formulaire :</string>
+    <string name="form_prenom">Prénom</string>
+    <string name="form_nom">Nom</string>
+    <string name="form_anniv">Date de naissance (JJ/MM/AA)</string>
+    <string name="form_tel">Numéro de téléphone</string>
+    <string name="form_mail">Adresse mail</string>
+    <string name="form_sport">Sport</string>
+    <string name="form_music">Musique</string>
+    <string name="form_lecture">Lecture</string>
+    <string name="form_photo">Photo</string>
+    <string name="form_dessin">Dessin</string>
+    <string name="form_langue">Langue</string>
+    <string name="form_sync">Synchroniser les données</string>
+    <string name="form_soum">Soumettre</string>
+    <string name="form_telecharger">Télécharger</string>
+    <string name="aff_valider">Valider vos informations</string>
+    <string name="aff_form">Informations rentrées :</string>
+    <string name="aff_nom_prenom">Prénom et Nom</string>
+    <string name="aff_anniv">Date de naissance</string>
+    <string name="aff_tel">Numéro de téléphone</string>
+    <string name="aff_mail">Adresse mail</string>
+    <string name="aff_interet">Interets</string>
+    <string name="aff_resultat">Résultat obtenu par le service :</string>
+    <string name="aff_resultat_2">Informations parsées :</string>
+    <string name="menu">Fragment - Service</string>
+    <string name="aff_frag">Fragment</string>
+    <string name="aff_serv">Service</string>
+    <string name="b_telechargement">Téléchargement web</string>
+    <string name="b_formulaire">Formulaire</string>
+    <string name="form_accueil">Accueil</string>
+    <string name="info_site">Informations du site : </string>
+    <string name="avertissement">Veuillez rentrer les champs correctement</string>
+</resources>

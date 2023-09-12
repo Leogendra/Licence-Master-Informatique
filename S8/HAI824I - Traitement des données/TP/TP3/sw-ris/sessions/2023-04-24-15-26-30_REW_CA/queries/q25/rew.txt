@@ -1,0 +1,2 @@
+ANS($an,$c) : [V_person\2($an,$a), V_plays\2($c,$a), V_pilot\1($c)]
+

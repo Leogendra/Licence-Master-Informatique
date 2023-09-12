@@ -1,0 +1,11 @@
+<https://www.starwars.com/databank/LightSaber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.starwars.com/databank/Object> .
+<https://www.starwars.com/databank/StarShip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.starwars.com/databank/Vehicle> .
+<https://www.starwars.com/databank/PodRacer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.starwars.com/databank/Vehicle> .
+<https://www.starwars.com/databank/Vehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.starwars.com/databank/Object> .
+
+<https://www.starwars.com/databank/pilotOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.starwars.com/databank/uses> .
+<https://www.starwars.com/databank/usesWeapon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.starwars.com/databank/uses> .
+
+<https://www.starwars.com/databank/pilotOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.starwars.com/databank/Vehicle> .
+<https://www.starwars.com/databank/uses> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.starwars.com/databank/Object> .
+<https://www.starwars.com/databank/uses> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.starwars.com/databank/Character> .

@@ -1,0 +1,159 @@
+{
+  "mappings": [
+    {
+      "name": "pilot",
+      "head": [
+        ["$char_iri", "<https://www.starwars.com/databank/pilotOf>", "$z"],
+        [
+          "$z",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<https://www.starwars.com/databank/StarShip>"
+        ]
+      ],
+      "body": {
+        "templates": {
+          "char_iri": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select character from vehicle where vehicleType='starship'",
+        "datasource": "SW_BANK"
+      }
+    },
+    {
+      "name": "pilot2",
+      "head": [
+        ["$char_iri", "<https://www.starwars.com/databank/pilotOf>", "$z"],
+        [
+          "$z",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<https://www.starwars.com/databank/PodRacer>"
+        ]
+      ],
+      "body": {
+        "templates": {
+          "char_iri": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select character from vehicle where vehicleType='podracer'",
+        "datasource": "SW_BANK"
+      }
+    },
+    {
+      "name": "actress",
+      "head": [["$actress", "<http://www.imdb.com/actressIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "actress": "<http://www.imdb.com/name/{nconst}>",
+          "movie": "<http://www.imdb.com/title/{tconst}>"
+        },
+        "query": "select nconst, tconst from casting where category='actress'",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "actor",
+      "head": [["$actor", "<http://www.imdb.com/maleActorIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "actor": "<http://www.imdb.com/name/{nconst}>",
+          "movie": "<http://www.imdb.com/title/{tconst}>"
+        },
+        "query": "select nconst, tconst from casting where category='actor'",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "plays",
+      "head": [["$actor", "<http://www.imdb.com/plays>", "$character"]],
+      "body": {
+        "templates": {
+          "actor": "<http://www.imdb.com/name/{nconst}>",
+          "character": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select nconst, character from casting where category in ('actor', 'actress')",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "characterIn",
+      "head": [["$character", "<http://www.imdb.com/characterIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "movie": "<http://www.imdb.com/title/{tconst}>",
+          "character": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select tconst, character from casting where category in ('actor', 'actress')",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "jedi",
+      "head": [
+        [
+          "$char_iri",
+          "<https://www.starwars.com/databank/usesWeapon>",
+          "$lightsaber"
+        ],
+        [
+          "$lightsaber",
+          "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
+          "<https://www.starwars.com/databank/LightSaber>"
+        ]
+      ],
+      "body": {
+        "templates": {
+          "char_iri": "<https://www.starwars.com/databank/{character}>",
+          "lightsaber": "<https://www.starwars.com/databank/{saber}>"
+        },
+        "query": "select character, saber from lightsaber",
+        "datasource": "SW_BANK"
+      }
+    },
+    {
+      "name": "person",
+      "head": [["$person", "<http://www.imdb.com/fullName>", "$fullName"]],
+      "body": {
+        "templates": {
+          "fullName": "primaryName",
+          "person": "<http://www.imdb.com/name/{nconst}>"
+        },
+        "query": "select nconst, primaryName from person",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "title",
+      "head": [
+        ["$movie", "<http://www.imdb.com/title>", "$title"],
+        ["$movie", "<http://www.imdb.com/releaseYear>", "$anneeSortie"]
+      ],
+      "body": {
+        "templates": {
+          "title": "primarytitle",
+          "movie": "<http://www.imdb.com/title/{tconst}>",
+          "anneeSortie": "<http://www.imdb.com/title/{startYear}>"
+        },
+        "query": "select tconst, primarytitle, startYear from title",
+        "datasource": "SW_IMDB"
+      }
+    }
+  ],
+  "datasources": [
+    {
+      "name": "SW_BANK",
+      "type": "SQLITE",
+      "parameters": {
+        "databasePath": "./sw_bank.db"
+      }
+    },
+    {
+      "name": "SW_IMDB",
+      "type": "SQLITE",
+      "parameters": {
+        "databasePath": "./sw_imdb.db"
+      }
+    }
+  ],
+  "name": "Star Wars Tutorial",
+  "description": "Small integration of two sources about Star Wars movies and characters",
+  "RDFSRuleSet": "RDFS",
+  "ontology": "ontology.nt"
+}

@@ -1,0 +1,12 @@
+<$x,$y,<https://www.starwars.com/databank/Object>> :- 
+	triple($x,<https://www.starwars.com/databank/pilotOf>,$y),
+	triple($FV_7,<https://www.starwars.com/databank/pilotOf>,$y);
+
+<$x,$y,$z> :- 
+	triple($x,<https://www.starwars.com/databank/pilotOf>,$y),
+	triple($y,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,$z);
+
+<$x,$y,<https://www.starwars.com/databank/Vehicle>> :- 
+	triple($x,<https://www.starwars.com/databank/pilotOf>,$y),
+	triple($FV_5,<https://www.starwars.com/databank/pilotOf>,$y);
+

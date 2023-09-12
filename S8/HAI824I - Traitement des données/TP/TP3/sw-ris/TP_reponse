@@ -1,0 +1,81 @@
+DEMARRAGE :
+
+http://localhost:8080/ris/sw-ris/index.html
+http://localhost:8080/client/index.html
+
+Commande a saisir :
+java -jar ../obiwan.jar server obi-wan.properties
+
+6.1 - Non ce n'est pas necessaire car piloteOf et userRacer est une sous propriété de user donc il herite de ses domain
+
+6.2 -
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sw: <https://www.starwars.com/databank/>
+PREFIX imdb: <http://www.imdb.com/>
+
+SELECT ?x ?z WHERE {
+?x sw:pilotOf ?y .
+?y rdf:type ?z .
+}
+
+oui une réponse en plus
+
+6.3 -
+
+SELECT \* WHERE {
+?movie imdb:title ?title .
+?movie imdb:releaseYear ?year .
+}
+
+On obtient 10 réponses
+
+6.4 -
+
+SELECT ?name ?title WHERE {
+?actress imdb:fullName ?name .
+?actress imdb:actressIn ?movie .
+?movie imdb:title ?title .
+}
+
+11 actrices
+
+26 acteurs
+
+6.5 -
+
+Il y a bien 37 réponses
+
+6.6 -
+
+On a 4 réponses attention character c'est sans star wars
+
+6.7 -
+
+SELECT ?character ?title WHERE
+{ ?actor imdb:plays ?character .
+?actor imdb:actorIn ?movie .
+?movie imdb:title ?title .
+}
+
+C'est la reuete SPARQL basique pour avoir les charactere qui sont dans les movie
+
+Aintenant in veut créer un imd qui s'apelle characterIn ou yaurai comme domain le character et comme range un movie avec son nom
+
+SELECT ?character ?title WHERE
+{ ?character imdb:characterIn ?movie .
+?movie imdb:title ?title .
+}
+
+Donc on doit garder ca
+?actor imdb:plays ?character .
+?actor imdb:actorIn ?movie .
+
+Dans un mapping ou une onthology ?
+Dans un mapping on a creer characterIn qui regarde les character et leurs titre dans casting pour pouvoir recuperer les character
+
+On obtient alors 38 réponses
+
+Et avec l'autre d'avant on en a :
+on en a 40

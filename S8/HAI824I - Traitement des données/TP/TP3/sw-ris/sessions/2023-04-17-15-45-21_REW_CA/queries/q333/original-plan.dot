@@ -1,0 +1,17 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/LightSaber>\")}" , color = blue] ; 
+0 -> 1 ; 
+2 [label="LogProj
+[1,0]" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+3 -> 4 ; 
+}
+

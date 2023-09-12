@@ -1,0 +1,32 @@
+ANS(<https://www.starwars.com/databank/LightSaber>,<http://www.w3.org/2000/01/rdf-schema#subClassOf>,<https://www.starwars.com/databank/Object>) : []
+
+ANS(<https://www.starwars.com/databank/uses>,<http://www.w3.org/2000/01/rdf-schema#range>,<https://www.starwars.com/databank/Object>) : []
+
+ANS(<https://www.starwars.com/databank/StarShip>,<http://www.w3.org/2000/01/rdf-schema#subClassOf>,<https://www.starwars.com/databank/Object>) : []
+
+ANS($x,$y,$z) : [V_jedi\2($z,$x), =\2($y,<https://www.starwars.com/databank/usesWeapon>)]
+
+ANS($x,$y,$z) : [V_person\2($z,$x), =\2($y,<http://www.imdb.com/fullName>)]
+
+ANS($x,$y,$z) : [V_jedi\2($x,X44971019747), =\2($y,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>), =\2($z,<https://www.starwars.com/databank/LightSaber>)]
+
+ANS($x,$y,$z) : [V_title\2($z,$x), =\2($y,<http://www.imdb.com/title>)]
+
+ANS($x,<https://www.starwars.com/databank/uses>,$z) : [V_jedi\2($z,$x)]
+
+ANS(<https://www.starwars.com/databank/Vehicle>,<http://www.w3.org/2000/01/rdf-schema#subClassOf>,<https://www.starwars.com/databank/Object>) : []
+
+ANS(<https://www.starwars.com/databank/pilotOf>,<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>,<https://www.starwars.com/databank/uses>) : []
+
+ANS(<https://www.starwars.com/databank/usesWeapon>,<http://www.w3.org/2000/01/rdf-schema#range>,<https://www.starwars.com/databank/Object>) : []
+
+ANS($x,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,<https://www.starwars.com/databank/Object>) : [V_jedi\2($x,$FV_4)]
+
+ANS(<https://www.starwars.com/databank/pilotOf>,<http://www.w3.org/2000/01/rdf-schema#range>,<https://www.starwars.com/databank/Object>) : []
+
+ANS(<https://www.starwars.com/databank/StarShip>,<http://www.w3.org/2000/01/rdf-schema#subClassOf>,<https://www.starwars.com/databank/Vehicle>) : []
+
+ANS(<https://www.starwars.com/databank/usesWeapon>,<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>,<https://www.starwars.com/databank/uses>) : []
+
+ANS(<https://www.starwars.com/databank/pilotOf>,<http://www.w3.org/2000/01/rdf-schema#range>,<https://www.starwars.com/databank/Vehicle>) : []
+

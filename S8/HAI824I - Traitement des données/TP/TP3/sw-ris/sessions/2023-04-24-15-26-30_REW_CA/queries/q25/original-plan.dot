@@ -1,0 +1,30 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="LogProj
+[0,2]" , color = blue] ; 
+0 -> 1 ; 
+2 [label="Join\n [2PREDICATE_EQUAL4] ", color = blue] ; 
+1 -> 2 ; 
+3 [label="Join\n [1PREDICATE_EQUAL3] ", color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSkolemFunctionCall
+(\"{1}\", <http://www.imdb.com/name/{0}>)" , color = blue] ; 
+3 -> 4 ; 
+5 [label="LogSQLEval 
+select nconst, primaryName from person", color = blue] ; 
+4 -> 5 ; 
+6 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <http://www.imdb.com/name/{0}>)" , color = blue] ; 
+3 -> 6 ; 
+7 [label="LogSQLEval 
+select nconst, character from casting where category in ('actor', 'actress')", color = blue] ; 
+6 -> 7 ; 
+8 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+2 -> 8 ; 
+9 [label="LogSQLEval 
+select character from vehicle where vehicleType='starship'", color = blue] ; 
+8 -> 9 ; 
+}
+

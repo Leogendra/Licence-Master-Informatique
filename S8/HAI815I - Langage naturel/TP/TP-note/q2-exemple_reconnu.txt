@@ -1,0 +1,10 @@
+entre(des,0,1).
+entre(herissons,1,2).
+entre(que,2,3).
+entre(une,3,4).
+entre(hermine,4,5).
+entre(horripilent,5,6).
+entre(hurle,6,7).
+
+?- s(0,7).
+true .

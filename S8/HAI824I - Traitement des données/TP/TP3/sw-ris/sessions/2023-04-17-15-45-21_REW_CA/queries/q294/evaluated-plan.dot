@@ -1,0 +1,53 @@
+digraph  g{ graph[label = "15:54:12.949"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="HashDistinct", color = yellow] ; 
+1 [label="Union", color = yellow] ; 
+0 -> 1 ; 
+2 [label="BindAccessEval", color = yellow] ; 
+1 -> 2 ; 
+3 [label="BindAccessEval", color = yellow] ; 
+2 -> 3 ; 
+4 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship'
+3", color = yellow] ; 
+3 -> 4 ; 
+5 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+3 -> 5 ; 
+6 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/Vehicle>\")}", color = yellow] ; 
+2 -> 6 ; 
+8 [label="BindAccessEval", color = yellow] ; 
+1 -> 8 ; 
+9 [label="BindAccessEval", color = yellow] ; 
+8 -> 9 ; 
+10 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE vehicleType = 'starship'
+3", color = yellow] ; 
+9 -> 10 ; 
+11 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+9 -> 11 ; 
+12 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}", color = yellow] ; 
+8 -> 12 ; 
+14 [label="BindAccessEval", color = yellow] ; 
+1 -> 14 ; 
+15 [label="BindAccessEval", color = yellow] ; 
+14 -> 15 ; 
+16 [label="SQLQuery
+SELECT character 
+FROM lightsaber
+8", color = yellow] ; 
+15 -> 16 ; 
+17 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+15 -> 17 ; 
+18 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/LightSaber>\")}", color = yellow] ; 
+14 -> 18 ; 
+}
+

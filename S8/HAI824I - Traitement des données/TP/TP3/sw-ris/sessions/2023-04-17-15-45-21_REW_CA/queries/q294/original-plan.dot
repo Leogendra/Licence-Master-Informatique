@@ -1,0 +1,43 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="Union", color = blue] ; 
+0 -> 1 ; 
+2 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/Vehicle>\")}" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogProj
+[0]" , color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+3 -> 4 ; 
+5 [label="LogSQLEval 
+select character from vehicle where vehicleType='starship'", color = blue] ; 
+4 -> 5 ; 
+7 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}" , color = blue] ; 
+1 -> 7 ; 
+8 [label="LogProj
+[0]" , color = blue] ; 
+7 -> 8 ; 
+9 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+8 -> 9 ; 
+10 [label="LogSQLEval 
+select character from vehicle where vehicleType='starship'", color = blue] ; 
+9 -> 10 ; 
+12 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/LightSaber>\")}" , color = blue] ; 
+1 -> 12 ; 
+13 [label="LogProj
+[1]" , color = blue] ; 
+12 -> 13 ; 
+14 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+13 -> 14 ; 
+15 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+14 -> 15 ; 
+}
+

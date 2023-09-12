@@ -1,0 +1,8 @@
+Phrases reconnues
+- un herison hurle
+- une hermine qui hurle hurle
+- des herisons que une hermine horipile hurlent
+
+Phrases non reconnues
+- des hermines que une hermine horipile
+- des herisons qui horipilent une hermine

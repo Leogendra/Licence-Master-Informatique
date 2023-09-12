@@ -1,0 +1,4 @@
+<$character,$title> :- 
+	triple($character,<http://www.imdb.com/characterIn>,$movie),
+	triple($movie,<http://www.imdb.com/title>,$title);
+

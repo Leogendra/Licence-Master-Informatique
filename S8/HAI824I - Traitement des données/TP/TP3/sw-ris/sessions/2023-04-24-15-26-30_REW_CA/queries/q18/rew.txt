@@ -1,0 +1,4 @@
+ANS($n) : [V_person\2($n,$a), V_actress\2($m,$a)]
+
+ANS($n) : [V_person\2($n,$a), V_actor\2($m,$a)]
+

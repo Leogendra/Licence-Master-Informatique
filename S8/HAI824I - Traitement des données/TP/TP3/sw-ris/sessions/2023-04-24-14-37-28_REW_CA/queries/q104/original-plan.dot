@@ -1,0 +1,6 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogEmptyOperator 
+null", color = blue] ; 
+}
+

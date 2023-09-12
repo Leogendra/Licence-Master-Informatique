@@ -1,0 +1,12 @@
+<$n> :- 
+	triple($a,<http://www.imdb.com/fullName>,$n),
+	triple($a,<http://www.imdb.com/actorIn>,$m);
+
+<$n> :- 
+	triple($a,<http://www.imdb.com/fullName>,$n),
+	triple($a,<http://www.imdb.com/actressIn>,$m);
+
+<$n> :- 
+	triple($a,<http://www.imdb.com/fullName>,$n),
+	triple($a,<http://www.imdb.com/maleActorIn>,$m);
+

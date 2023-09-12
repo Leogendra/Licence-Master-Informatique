@@ -1,0 +1,4 @@
+<$movie,$title> :- 
+	triple($movie,<http://www.imdb.com/title>,$title),
+	triple($movie,<http://www.imdb.com/releaseYear>,"1977");
+

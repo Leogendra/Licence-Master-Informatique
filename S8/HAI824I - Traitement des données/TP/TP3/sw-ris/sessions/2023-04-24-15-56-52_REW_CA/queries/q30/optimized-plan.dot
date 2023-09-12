@@ -1,0 +1,9 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>, \"{1}\")" , color = blue] ; 
+1 [label="LogSQLEval 
+SELECT DISTINCT tab_6.character, tab_7.primarytitle FROM title AS tab_7, casting AS tab_6 WHERE tab_6.category IN ('actor', 'actress') AND tab_6.tconst = tab_7.tconst", color = blue] ; 
+0 -> 1 ; 
+}
+

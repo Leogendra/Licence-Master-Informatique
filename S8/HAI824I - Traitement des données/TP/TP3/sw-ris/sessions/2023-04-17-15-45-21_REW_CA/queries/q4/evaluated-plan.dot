@@ -1,0 +1,196 @@
+digraph  g{ graph[label = "15:51:47.288"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="HashDistinct", color = yellow] ; 
+1 [label="Union", color = yellow] ; 
+0 -> 1 ; 
+2 [label="BindAccessEval", color = yellow] ; 
+1 -> 2 ; 
+3 [label="BindAccessEval", color = yellow] ; 
+2 -> 3 ; 
+4 [label="SQLQuery
+SELECT saber 
+FROM lightsaber
+8", color = yellow] ; 
+3 -> 4 ; 
+5 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+3 -> 5 ; 
+6 [label="FunctionCallBindAccess
+AddConstant{1=(\"<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+2 -> 6 ; 
+8 [label="BindAccessEval", color = yellow] ; 
+1 -> 8 ; 
+9 [label="Project
+[]", color = yellow] ; 
+8 -> 9 ; 
+10 [label="(5)"] ; 
+9 -> 10 ; 
+11 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/LightSaber>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+8 -> 11 ; 
+13 [label="BindAccessEval", color = yellow] ; 
+1 -> 13 ; 
+14 [label="Project
+[]", color = yellow] ; 
+13 -> 14 ; 
+15 [label="(9)"] ; 
+14 -> 15 ; 
+16 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/uses>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+13 -> 16 ; 
+18 [label="BindAccessEval", color = yellow] ; 
+1 -> 18 ; 
+19 [label="Project
+[]", color = yellow] ; 
+18 -> 19 ; 
+20 [label="(13)"] ; 
+19 -> 20 ; 
+21 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/StarShip>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+18 -> 21 ; 
+23 [label="BindAccessEval", color = yellow] ; 
+1 -> 23 ; 
+24 [label="BindAccessEval", color = yellow] ; 
+23 -> 24 ; 
+25 [label="SQLQuery
+SELECT tconst, primarytitle 
+FROM title
+10", color = yellow] ; 
+24 -> 25 ; 
+26 [label="FunctionCallBindAccess
+(<http://www.imdb.com/title/{0}>, \"{1}\")", color = yellow] ; 
+24 -> 26 ; 
+27 [label="FunctionCallBindAccess
+AddConstant{1=(\"<http://www.imdb.com/title>\")}", color = yellow] ; 
+23 -> 27 ; 
+29 [label="BindAccessEval", color = yellow] ; 
+1 -> 29 ; 
+30 [label="BindAccessEval", color = yellow] ; 
+29 -> 30 ; 
+31 [label="SQLQuery
+SELECT character, saber 
+FROM lightsaber
+8", color = yellow] ; 
+30 -> 31 ; 
+32 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>, <https://www.starwars.com/databank/{1}>)", color = yellow] ; 
+30 -> 32 ; 
+33 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/usesWeapon>\")}", color = yellow] ; 
+29 -> 33 ; 
+35 [label="BindAccessEval", color = yellow] ; 
+1 -> 35 ; 
+36 [label="BindAccessEval", color = yellow] ; 
+35 -> 36 ; 
+37 [label="SQLQuery
+SELECT nconst, primaryName 
+FROM person
+24", color = yellow] ; 
+36 -> 37 ; 
+38 [label="FunctionCallBindAccess
+(<http://www.imdb.com/name/{0}>, \"{1}\")", color = yellow] ; 
+36 -> 38 ; 
+39 [label="FunctionCallBindAccess
+AddConstant{1=(\"<http://www.imdb.com/fullName>\")}", color = yellow] ; 
+35 -> 39 ; 
+41 [label="BindAccessEval", color = yellow] ; 
+1 -> 41 ; 
+42 [label="BindAccessEval", color = yellow] ; 
+41 -> 42 ; 
+43 [label="SQLQuery
+SELECT saber 
+FROM lightsaber
+8", color = yellow] ; 
+42 -> 43 ; 
+44 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>)", color = yellow] ; 
+42 -> 44 ; 
+45 [label="FunctionCallBindAccess
+AddConstant{1=(\"<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\", \"<https://www.starwars.com/databank/LightSaber>\")}", color = yellow] ; 
+41 -> 45 ; 
+47 [label="BindAccessEval", color = yellow] ; 
+1 -> 47 ; 
+48 [label="BindAccessEval", color = yellow] ; 
+47 -> 48 ; 
+49 [label="SQLQuery
+SELECT character, saber 
+FROM lightsaber
+8", color = yellow] ; 
+48 -> 49 ; 
+50 [label="FunctionCallBindAccess
+(<https://www.starwars.com/databank/{0}>, <https://www.starwars.com/databank/{1}>)", color = yellow] ; 
+48 -> 50 ; 
+51 [label="FunctionCallBindAccess
+AddConstant{1=(\"<https://www.starwars.com/databank/uses>\")}", color = yellow] ; 
+47 -> 51 ; 
+53 [label="BindAccessEval", color = yellow] ; 
+1 -> 53 ; 
+54 [label="Project
+[]", color = yellow] ; 
+53 -> 54 ; 
+55 [label="(42)"] ; 
+54 -> 55 ; 
+56 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/Vehicle>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+53 -> 56 ; 
+58 [label="BindAccessEval", color = yellow] ; 
+1 -> 58 ; 
+59 [label="Project
+[]", color = yellow] ; 
+58 -> 59 ; 
+60 [label="(46)"] ; 
+59 -> 60 ; 
+61 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>\", \"<https://www.starwars.com/databank/uses>\")}", color = yellow] ; 
+58 -> 61 ; 
+63 [label="BindAccessEval", color = yellow] ; 
+1 -> 63 ; 
+64 [label="Project
+[]", color = yellow] ; 
+63 -> 64 ; 
+65 [label="(50)"] ; 
+64 -> 65 ; 
+66 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/usesWeapon>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+63 -> 66 ; 
+68 [label="BindAccessEval", color = yellow] ; 
+1 -> 68 ; 
+69 [label="Project
+[]", color = yellow] ; 
+68 -> 69 ; 
+70 [label="(54)"] ; 
+69 -> 70 ; 
+71 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}", color = yellow] ; 
+68 -> 71 ; 
+73 [label="BindAccessEval", color = yellow] ; 
+1 -> 73 ; 
+74 [label="Project
+[]", color = yellow] ; 
+73 -> 74 ; 
+75 [label="(58)"] ; 
+74 -> 75 ; 
+76 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/StarShip>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Vehicle>\")}", color = yellow] ; 
+73 -> 76 ; 
+78 [label="BindAccessEval", color = yellow] ; 
+1 -> 78 ; 
+79 [label="Project
+[]", color = yellow] ; 
+78 -> 79 ; 
+80 [label="(62)"] ; 
+79 -> 80 ; 
+81 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/usesWeapon>\", \"<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>\", \"<https://www.starwars.com/databank/uses>\")}", color = yellow] ; 
+78 -> 81 ; 
+83 [label="BindAccessEval", color = yellow] ; 
+1 -> 83 ; 
+84 [label="Project
+[]", color = yellow] ; 
+83 -> 84 ; 
+85 [label="(66)"] ; 
+84 -> 85 ; 
+86 [label="FunctionCallBindAccess
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Vehicle>\")}", color = yellow] ; 
+83 -> 86 ; 
+}
+

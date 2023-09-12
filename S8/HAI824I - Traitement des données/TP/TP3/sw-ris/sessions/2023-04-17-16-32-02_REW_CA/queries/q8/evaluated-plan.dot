@@ -1,0 +1,12 @@
+digraph  g{ graph[label = "16:32:45.377"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="BindAccessEval", color = yellow] ; 
+1 [label="SQLQuery
+SELECT DISTINCT tconst 
+FROM title
+10", color = yellow] ; 
+0 -> 1 ; 
+2 [label="FunctionCallBindAccess
+(<http://www.imdb.com/title/{0}>)", color = yellow] ; 
+0 -> 2 ; 
+}
+

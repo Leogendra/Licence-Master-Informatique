@@ -1,0 +1,15 @@
+<$name> :- 
+	triple($actor,<http://www.imdb.com/fullName>,$name),
+	triple($actor,<http://www.imdb.com/maleActorIn>,$movie),
+	triple($movie,<http://www.imdb.com/title>,"Star Wars: Episode IV - A New Hope");
+
+<$name> :- 
+	triple($actor,<http://www.imdb.com/fullName>,$name),
+	triple($actor,<http://www.imdb.com/actorIn>,$movie),
+	triple($movie,<http://www.imdb.com/title>,"Star Wars: Episode IV - A New Hope");
+
+<$name> :- 
+	triple($actor,<http://www.imdb.com/fullName>,$name),
+	triple($actor,<http://www.imdb.com/actressIn>,$movie),
+	triple($movie,<http://www.imdb.com/title>,"Star Wars: Episode IV - A New Hope");
+

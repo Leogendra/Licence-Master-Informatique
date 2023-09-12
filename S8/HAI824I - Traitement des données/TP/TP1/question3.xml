@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:audio="http://example.com/audio#">
+
+  <rdf:Description rdf:about="http://example.com/audio#Jupiter">
+    <rdf:type rdf:resource="http://example.com/audio#Symphony"/>
+
+    <rdf:composé_de rdf:resource="http://example.com/audio#Parties"/>
+
+    <rdf:enregistré rdf:resource="http://example.com/audio#Enregistrement"/>
+
+    <rdf:composer rdf:resource="http://example.com/audio#Mozart"/>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.com/audio#Enregistrement">
+    <audio:dirigé>Claudio_Abbado</audio:dirigé>
+    <audio:interprété>Orchestre_Symphonique_de_Londres</audio:interprété>
+    <audio:année>1980</audio:année>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.com/audio#Parties">
+    <audio:partie_1>Allegro_Vivace</audio:partie_1>
+    <audio:partie_2>Andante_Cantabile</audio:partie_2>
+    <audio:partie_3>Menuetto</audio:partie_3>
+    <audio:partie_4>Molto_Allegro</audio:partie_4>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.com/audio#Mozart">
+     <rdf:name>Wolfgang Amadeus Mozart</rdf:name>
+     <rdf:birthday>27 Janvier 1756</rdf:birthday>
+     <rdf:birthplace>Salzburg</rdf:birthplace>
+     <rdf:deathday>5 Decembre 1791</rdf:deathday>
+     <rdf:deathplace>Vienne</rdf:deathplace>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.com/audio#Symphony">
+     <audio:type_symphonie>UT majeur</audio:type_symphonie>
+  </rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,4 @@
+ANS($name) : [V_person\2($name,$actor), V_actor\2($movie,$actor), V_title\3("Star Wars: Episode IV - A New Hope",X2242880868,$movie)]
+
+ANS($name) : [V_person\2($name,$actor), V_actress\2($movie,$actor), V_title\3("Star Wars: Episode IV - A New Hope",X22428808633,$movie)]
+

@@ -1,0 +1,61 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="Union", color = blue] ; 
+0 -> 1 ; 
+2 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'starship'", color = blue] ; 
+3 -> 4 ; 
+6 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/PodRacer>\")}" , color = blue] ; 
+1 -> 6 ; 
+7 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+6 -> 7 ; 
+8 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'podracer'", color = blue] ; 
+7 -> 8 ; 
+10 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/vehicle>\")}" , color = blue] ; 
+1 -> 10 ; 
+11 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+10 -> 11 ; 
+12 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'podracer'", color = blue] ; 
+11 -> 12 ; 
+14 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/vehicle>\")}" , color = blue] ; 
+1 -> 14 ; 
+15 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+14 -> 15 ; 
+16 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'starship'", color = blue] ; 
+15 -> 16 ; 
+18 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 18 ; 
+19 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+18 -> 19 ; 
+20 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'podracer'", color = blue] ; 
+19 -> 20 ; 
+22 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 22 ; 
+23 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+22 -> 23 ; 
+24 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'starship'", color = blue] ; 
+23 -> 24 ; 
+}
+

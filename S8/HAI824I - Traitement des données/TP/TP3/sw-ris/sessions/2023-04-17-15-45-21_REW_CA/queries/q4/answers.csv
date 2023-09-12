@@ -1,0 +1,73 @@
+$x	GRAAL_COL_0	GRAAL_COL_1
+<https://www.starwars.com/databank/yellow-saber>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/green-saber-luke>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/blue-saber-1-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/blue-saber-2-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/blue-saber-3-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/blue-saber-anakin>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/red-saber-darth-wader>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/LightSaber>	<http://www.w3.org/2000/01/rdf-schema#subClassOf>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/uses>	<http://www.w3.org/2000/01/rdf-schema#range>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/StarShip>	<http://www.w3.org/2000/01/rdf-schema#subClassOf>	<https://www.starwars.com/databank/Object>	
+<http://www.imdb.com/title/tt0076759>	<http://www.imdb.com/title>	"Star Wars: Episode IV - A New Hope"	
+<http://www.imdb.com/title/tt0080684>	<http://www.imdb.com/title>	"Star Wars: Episode V - The Empire Strikes Back"	
+<http://www.imdb.com/title/tt0086190>	<http://www.imdb.com/title>	"Star Wars: Episode VI - Return of the Jedi"	
+<http://www.imdb.com/title/tt0120915>	<http://www.imdb.com/title>	"Star Wars: Episode I - The Phantom Menace"	
+<http://www.imdb.com/title/tt0121765>	<http://www.imdb.com/title>	"Star Wars: Episode II - Attack of the Clones"	
+<http://www.imdb.com/title/tt0121766>	<http://www.imdb.com/title>	"Star Wars: Episode III - Revenge of the Sith"	
+<http://www.imdb.com/title/tt2488496>	<http://www.imdb.com/title>	"Star Wars: Episode VII - The Force Awakens"	
+<http://www.imdb.com/title/tt2527336>	<http://www.imdb.com/title>	"Star Wars: Episode VIII - The Last Jedi"	
+<http://www.imdb.com/title/tt2527338>	<http://www.imdb.com/title>	"Star Wars: Episode IX - The Rise of Skywalker"	
+<http://www.imdb.com/title/tt3748528>	<http://www.imdb.com/title>	"Rogue One: A Star Wars Story"	
+<https://www.starwars.com/databank/rey>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/yellow-saber>	
+<https://www.starwars.com/databank/luke-skywalker>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/green-saber-luke>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/blue-saber-1-obi-wan>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/blue-saber-2-obi-wan>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/blue-saber-3-obi-wan>	
+<https://www.starwars.com/databank/anakin-skywalker>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/blue-saber-anakin>	
+<https://www.starwars.com/databank/darth-vader>	<https://www.starwars.com/databank/usesWeapon>	<https://www.starwars.com/databank/red-saber-darth-wader>	
+<http://www.imdb.com/name/nm0000027>	<http://www.imdb.com/fullName>	"Alec Guinness"	
+<http://www.imdb.com/name/nm0000148>	<http://www.imdb.com/fullName>	"Harrison Ford"	
+<http://www.imdb.com/name/nm0000184>	<http://www.imdb.com/fullName>	"George Lucas"	
+<http://www.imdb.com/name/nm0000191>	<http://www.imdb.com/fullName>	"Ewan McGregor"	
+<http://www.imdb.com/name/nm0000204>	<http://www.imdb.com/fullName>	"Natalie Portman"	
+<http://www.imdb.com/name/nm0000402>	<http://www.imdb.com/fullName>	"Carrie Fisher"	
+<http://www.imdb.com/name/nm0000434>	<http://www.imdb.com/fullName>	"Mark Hamill"	
+<http://www.imdb.com/name/nm0000469>	<http://www.imdb.com/fullName>	"James Earl Jones"	
+<http://www.imdb.com/name/nm0000489>	<http://www.imdb.com/fullName>	"Christopher Lee"	
+<http://www.imdb.com/name/nm0000553>	<http://www.imdb.com/fullName>	"Liam Neeson"	
+<http://www.imdb.com/name/nm0001850>	<http://www.imdb.com/fullName>	"Billy Dee Williams"	
+<http://www.imdb.com/name/nm0002354>	<http://www.imdb.com/fullName>	"John Williams"	
+<http://www.imdb.com/name/nm0005157>	<http://www.imdb.com/fullName>	"Jake Lloyd"	
+<http://www.imdb.com/name/nm0009190>	<http://www.imdb.com/fullName>	"J.J. Abrams"	
+<http://www.imdb.com/name/nm0159789>	<http://www.imdb.com/fullName>	"Hayden Christensen"	
+<http://www.imdb.com/name/nm0426059>	<http://www.imdb.com/fullName>	"Rian Johnson"	
+<http://www.imdb.com/name/nm0428065>	<http://www.imdb.com/fullName>	"Felicity Jones"	
+<http://www.imdb.com/name/nm0449984>	<http://www.imdb.com/fullName>	"Irvin Kershner"	
+<http://www.imdb.com/name/nm0549658>	<http://www.imdb.com/fullName>	"Richard Marquand"	
+<http://www.imdb.com/name/nm1872855>	<http://www.imdb.com/fullName>	"Spencer Wilding"	
+<http://www.imdb.com/name/nm2284484>	<http://www.imdb.com/fullName>	"Gareth Edwards"	
+<http://www.imdb.com/name/nm3485845>	<http://www.imdb.com/fullName>	"Adam Driver"	
+<http://www.imdb.com/name/nm3915784>	<http://www.imdb.com/fullName>	"John Boyega"	
+<http://www.imdb.com/name/nm5397459>	<http://www.imdb.com/fullName>	"Daisy Ridley"	
+<https://www.starwars.com/databank/yellow-saber>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/green-saber-luke>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/blue-saber-1-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/blue-saber-2-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/blue-saber-3-obi-wan>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/blue-saber-anakin>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/red-saber-darth-wader>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://www.starwars.com/databank/LightSaber>	
+<https://www.starwars.com/databank/rey>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/yellow-saber>	
+<https://www.starwars.com/databank/luke-skywalker>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/green-saber-luke>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/blue-saber-1-obi-wan>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/blue-saber-2-obi-wan>	
+<https://www.starwars.com/databank/obi-wan-kenobi>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/blue-saber-3-obi-wan>	
+<https://www.starwars.com/databank/anakin-skywalker>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/blue-saber-anakin>	
+<https://www.starwars.com/databank/darth-vader>	<https://www.starwars.com/databank/uses>	<https://www.starwars.com/databank/red-saber-darth-wader>	
+<https://www.starwars.com/databank/Vehicle>	<http://www.w3.org/2000/01/rdf-schema#subClassOf>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/pilotOf>	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>	<https://www.starwars.com/databank/uses>	
+<https://www.starwars.com/databank/usesWeapon>	<http://www.w3.org/2000/01/rdf-schema#range>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/pilotOf>	<http://www.w3.org/2000/01/rdf-schema#range>	<https://www.starwars.com/databank/Object>	
+<https://www.starwars.com/databank/StarShip>	<http://www.w3.org/2000/01/rdf-schema#subClassOf>	<https://www.starwars.com/databank/Vehicle>	
+<https://www.starwars.com/databank/usesWeapon>	<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>	<https://www.starwars.com/databank/uses>	
+<https://www.starwars.com/databank/pilotOf>	<http://www.w3.org/2000/01/rdf-schema#range>	<https://www.starwars.com/databank/Vehicle>	

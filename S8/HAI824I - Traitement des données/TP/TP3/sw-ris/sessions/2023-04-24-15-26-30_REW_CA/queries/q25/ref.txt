@@ -1,0 +1,18 @@
+<$an,$c> :- 
+	triple($a,<http://www.imdb.com/fullName>,$an),
+	triple($a,<http://www.imdb.com/plays>,$c),
+	triple($c,<https://www.starwars.com/databank/uses>,$o),
+	triple($o,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,<https://www.starwars.com/databank/StarShip>);
+
+<$an,$c> :- 
+	triple($a,<http://www.imdb.com/fullName>,$an),
+	triple($a,<http://www.imdb.com/plays>,$c),
+	triple($c,<https://www.starwars.com/databank/usesWeapon>,$o),
+	triple($o,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,<https://www.starwars.com/databank/StarShip>);
+
+<$an,$c> :- 
+	triple($a,<http://www.imdb.com/fullName>,$an),
+	triple($a,<http://www.imdb.com/plays>,$c),
+	triple($c,<https://www.starwars.com/databank/pilotOf>,$o),
+	triple($o,<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,<https://www.starwars.com/databank/StarShip>);
+

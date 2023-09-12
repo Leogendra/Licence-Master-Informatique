@@ -1,0 +1,25 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="Union", color = blue] ; 
+0 -> 1 ; 
+2 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/StarShip>\")}" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'starship'", color = blue] ; 
+3 -> 4 ; 
+6 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/PodRacer>\")}" , color = blue] ; 
+1 -> 6 ; 
+7 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+6 -> 7 ; 
+8 [label="LogSQLEval 
+SELECT character FROM vehicle WHERE vehicleType = 'podracer'", color = blue] ; 
+7 -> 8 ; 
+}
+

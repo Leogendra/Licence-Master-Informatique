@@ -1,0 +1,56 @@
+MODULE main
+VAR
+  state : {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14};
+
+DEFINE
+  e0 := state = s1 | state = s2 | state = s3 | state = s4 | state = s11;
+  e1 := state = s5 | state = s6 | state = s7 | state = s8 | state = s14;
+  o := state = s2 | state = s3 | state = s6 | state = s7;
+  a0 := state = s4 | state = s7 | state = s8 | state = s9 | state = s10 | state = s13 | state = s14;
+  a1 := state = s3 | state = s4 | state = s10 | state = s11 | state = s12 | state = s13;
+  m10 := state = s9 | state = s10;
+  m01 := state = s12 | state = s13;
+
+ASSIGN
+  init(state) := s1;
+  next(state) := case
+    state = s1  : s2;
+    state = s2  : s2;
+    state = s2  : s3;
+    state = s3  : s4;
+    state = s4  : s12;
+    state = s5  : s6;
+    state = s6  : s6;
+    state = s6  : s7;
+    state = s7  : s8;
+    state = s8  : s9;
+    state = s9  : s1;
+    state = s9  : s10;
+    state = s10 : s11;
+    state = s11 : s3;
+    state = s12 : s5;
+    state = s12 : s13;
+    state = s13 : s14;
+    state = s14 : s7;
+    esac;
+
+-- L'ascenseur ne peut pas être à la fois à l'étage 0 et à l'étage 1.
+SPEC
+  AG (e0 -> !e1);
+  
+-- Si l'ascenseur est à l'étage 0 et appelé au 1, il va finir par se déplacer du 0 au 1.
+SPEC
+	AG (e0 & a1 -> AF m01)
+
+-- L'ascenseur ne peut pas être entre deux étages, du niveau 0 vers le niveau 1, et du niveau 1 vers le niveau 0 en même temps.
+SPEC
+  AG !(m01 & m10);
+
+-- Si l'ascenseur est entre deux étages, du niveau 0 vers le niveau 1, il atteindra l'étage 1 dans le futur.
+SPEC
+  AG (m01 -> AF e1);
+  
+--  Text FAUX : l'ascenseur peut être à l'étage 0 et à l'étage 1
+SPEC
+  EF (e1 & e0)   
+  

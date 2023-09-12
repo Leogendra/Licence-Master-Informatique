@@ -1,0 +1,28 @@
+digraph  g{ graph[label = "15:41:2.513"]
+node [shape=rectangle, color=black, fontcolor=black, style=bold] edge [color=black] 0 [label="BindAccessEval", color = yellow] ; 
+1 [label="HashDistinct", color = yellow] ; 
+0 -> 1 ; 
+2 [label="Project
+[0, 1]", color = yellow] ; 
+1 -> 2 ; 
+3 [label="RightBindJoin 
+[[1]]
+11", color = yellow] ; 
+2 -> 3 ; 
+4 [label="SQLQuery
+SELECT tab_8.primaryName, tab_9.character 
+FROM person AS tab_8, casting AS tab_9 
+WHERE tab_9.category IN ('actor', 'actress') AND tab_8.nconst = tab_9.nconst
+38", color = yellow] ; 
+3 -> 4 ; 
+5 [label="SQLQuery
+SELECT character 
+FROM vehicle 
+WHERE character = ? AND vehicleType = 'starship'
+11", color = yellow] ; 
+3 -> 5 ; 
+6 [label="FunctionCallBindAccess
+(\"{0}\", <https://www.starwars.com/databank/{1}>)", color = yellow] ; 
+0 -> 6 ; 
+}
+

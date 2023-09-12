@@ -1,0 +1,28 @@
+com.example.tp3_fragementsservices.app-startup-runtime-1.0.0-0 C:\Users\Brandade\.gradle\caches\transforms-3\04137dab713f24befb7f76018578497c\transformed\startup-runtime-1.0.0\res
+com.example.tp3_fragementsservices.app-lifecycle-process-2.4.0-1 C:\Users\Brandade\.gradle\caches\transforms-3\2244c9bd04f48de056c1159c637b1b8b\transformed\lifecycle-process-2.4.0\res
+com.example.tp3_fragementsservices.app-core-1.7.0-2 C:\Users\Brandade\.gradle\caches\transforms-3\32b22ae24ddd49268bb45350efca99f0\transformed\core-1.7.0\res
+com.example.tp3_fragementsservices.app-transition-1.2.0-3 C:\Users\Brandade\.gradle\caches\transforms-3\3c95aa9aa58eb5547a0a9586ce3ea2fe\transformed\transition-1.2.0\res
+com.example.tp3_fragementsservices.app-lifecycle-viewmodel-2.3.1-4 C:\Users\Brandade\.gradle\caches\transforms-3\5f2efd3309178dc845250079b3e9ba89\transformed\lifecycle-viewmodel-2.3.1\res
+com.example.tp3_fragementsservices.app-emoji2-views-helper-1.0.0-5 C:\Users\Brandade\.gradle\caches\transforms-3\6d34b81eabc06a49cef4f2f732549656\transformed\emoji2-views-helper-1.0.0\res
+com.example.tp3_fragementsservices.app-material-1.5.0-6 C:\Users\Brandade\.gradle\caches\transforms-3\70a4b6dd221e545640f35a03024dd34b\transformed\material-1.5.0\res
+com.example.tp3_fragementsservices.app-savedstate-1.1.0-7 C:\Users\Brandade\.gradle\caches\transforms-3\7cac1b6717abb94e4f916c6ebfd1da5a\transformed\savedstate-1.1.0\res
+com.example.tp3_fragementsservices.app-coordinatorlayout-1.1.0-8 C:\Users\Brandade\.gradle\caches\transforms-3\a2e230625f9cadea5eed95dc3ca61391\transformed\coordinatorlayout-1.1.0\res
+com.example.tp3_fragementsservices.app-drawerlayout-1.1.1-9 C:\Users\Brandade\.gradle\caches\transforms-3\a3a03d46ae5442b50598cd9d2958ec7b\transformed\drawerlayout-1.1.1\res
+com.example.tp3_fragementsservices.app-appcompat-1.4.1-10 C:\Users\Brandade\.gradle\caches\transforms-3\ada577367486a08f95ae95d343b29c4b\transformed\appcompat-1.4.1\res
+com.example.tp3_fragementsservices.app-emoji2-1.0.0-11 C:\Users\Brandade\.gradle\caches\transforms-3\b9027b92c1482b134488be162c33fb60\transformed\emoji2-1.0.0\res
+com.example.tp3_fragementsservices.app-recyclerview-1.1.0-12 C:\Users\Brandade\.gradle\caches\transforms-3\bbb54ae256d8f6b016ef7e8ffeda0f37\transformed\recyclerview-1.1.0\res
+com.example.tp3_fragementsservices.app-lifecycle-runtime-2.4.0-13 C:\Users\Brandade\.gradle\caches\transforms-3\c808e21cb44ba80f74225779dde570af\transformed\lifecycle-runtime-2.4.0\res
+com.example.tp3_fragementsservices.app-constraintlayout-2.1.3-14 C:\Users\Brandade\.gradle\caches\transforms-3\c86f49f81ef78aa82a4d0876b1cab401\transformed\constraintlayout-2.1.3\res
+com.example.tp3_fragementsservices.app-annotation-experimental-1.1.0-15 C:\Users\Brandade\.gradle\caches\transforms-3\cf17040dba9b475bf09190f046a6996d\transformed\annotation-experimental-1.1.0\res
+com.example.tp3_fragementsservices.app-appcompat-resources-1.4.1-16 C:\Users\Brandade\.gradle\caches\transforms-3\d32cf60dd178c354259ca0a75dbf25af\transformed\appcompat-resources-1.4.1\res
+com.example.tp3_fragementsservices.app-viewpager2-1.0.0-17 C:\Users\Brandade\.gradle\caches\transforms-3\d79342ee9818b768bd3b596a7b57b752\transformed\viewpager2-1.0.0\res
+com.example.tp3_fragementsservices.app-fragment-1.3.6-18 C:\Users\Brandade\.gradle\caches\transforms-3\e662a78d598a403fc10bb2550268231c\transformed\fragment-1.3.6\res
+com.example.tp3_fragementsservices.app-cardview-1.0.0-19 C:\Users\Brandade\.gradle\caches\transforms-3\ee0027bc9d5788a8013686284e27f76a\transformed\cardview-1.0.0\res
+com.example.tp3_fragementsservices.app-pngs-20 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\generated\res\pngs\debug
+com.example.tp3_fragementsservices.app-resValues-21 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\generated\res\resValues\debug
+com.example.tp3_fragementsservices.app-rs-22 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\generated\res\rs\debug
+com.example.tp3_fragementsservices.app-packageDebugResources-23 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.tp3_fragementsservices.app-packageDebugResources-24 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.tp3_fragementsservices.app-merged_res-25 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\build\intermediates\merged_res\debug
+com.example.tp3_fragementsservices.app-debug-26 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\src\debug\res
+com.example.tp3_fragementsservices.app-main-27 D:\Bureau\Projet_M1_IASD\HAI811I - Developpement mobile\TP3\TP3FragementsServices Gaby\app\src\main\res

@@ -1,0 +1,11 @@
+?- s([un,herissons,hurle],[]).
+false.
+
+?- s([un,herisson,qui,hurlent,hurle],[]).
+false.
+
+?- s([des,herissons,qui,hurle,hurlent],[]).
+false.
+
+?- s([des,hermine,qui,horripile,un,herisson,hurle],[]).
+false. 

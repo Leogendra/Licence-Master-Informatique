@@ -1,0 +1,5 @@
+?- s([un,herisson,hurle],[]).
+true 
+
+?- s([une,hermine,qui,horripile,une,hermine,hurle],[]).
+true 

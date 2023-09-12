@@ -1,0 +1,14 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="LogProj
+[2]" , color = blue] ; 
+0 -> 1 ; 
+2 [label="LogSkolemFunctionCall
+(\"{1}\", \"{2}\", <http://www.imdb.com/title/{0}>)" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogSQLEval 
+SELECT tconst, primarytitle, releaseyear FROM title", color = blue] ; 
+2 -> 3 ; 
+}
+

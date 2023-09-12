@@ -1,0 +1,169 @@
+digraph  g{
+node [shape=rectangle, color=black, fontcolor=black, style=bold]
+0 [label="LogDistinct" , color = blue] ; 
+1 [label="Union", color = blue] ; 
+0 -> 1 ; 
+2 [label="LogFunctionCall
+AddConstant{1=(\"<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 2 ; 
+3 [label="LogProj
+[0]" , color = blue] ; 
+2 -> 3 ; 
+4 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+3 -> 4 ; 
+5 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+4 -> 5 ; 
+7 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/LightSaber>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 7 ; 
+8 [label="LogProj
+[]" , color = blue] ; 
+7 -> 8 ; 
+9 [label="null 
+null", color = blue] ; 
+8 -> 9 ; 
+11 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/uses>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 11 ; 
+12 [label="LogProj
+[]" , color = blue] ; 
+11 -> 12 ; 
+13 [label="null 
+null", color = blue] ; 
+12 -> 13 ; 
+15 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/StarShip>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 15 ; 
+16 [label="LogProj
+[]" , color = blue] ; 
+15 -> 16 ; 
+17 [label="null 
+null", color = blue] ; 
+16 -> 17 ; 
+19 [label="LogFunctionCall
+AddConstant{1=(\"<http://www.imdb.com/title>\")}" , color = blue] ; 
+1 -> 19 ; 
+20 [label="LogProj
+[1,0]" , color = blue] ; 
+19 -> 20 ; 
+21 [label="LogSkolemFunctionCall
+(\"{1}\", <http://www.imdb.com/title/{0}>)" , color = blue] ; 
+20 -> 21 ; 
+22 [label="LogSQLEval 
+select tconst, primarytitle from title", color = blue] ; 
+21 -> 22 ; 
+24 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/usesWeapon>\")}" , color = blue] ; 
+1 -> 24 ; 
+25 [label="LogProj
+[1,0]" , color = blue] ; 
+24 -> 25 ; 
+26 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+25 -> 26 ; 
+27 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+26 -> 27 ; 
+29 [label="LogFunctionCall
+AddConstant{1=(\"<http://www.imdb.com/fullName>\")}" , color = blue] ; 
+1 -> 29 ; 
+30 [label="LogProj
+[1,0]" , color = blue] ; 
+29 -> 30 ; 
+31 [label="LogSkolemFunctionCall
+(\"{1}\", <http://www.imdb.com/name/{0}>)" , color = blue] ; 
+30 -> 31 ; 
+32 [label="LogSQLEval 
+select nconst, primaryName from person", color = blue] ; 
+31 -> 32 ; 
+34 [label="LogFunctionCall
+AddConstant{1=(\"<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\", \"<https://www.starwars.com/databank/LightSaber>\")}" , color = blue] ; 
+1 -> 34 ; 
+35 [label="LogProj
+[0]" , color = blue] ; 
+34 -> 35 ; 
+36 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+35 -> 36 ; 
+37 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+36 -> 37 ; 
+39 [label="LogFunctionCall
+AddConstant{1=(\"<https://www.starwars.com/databank/uses>\")}" , color = blue] ; 
+1 -> 39 ; 
+40 [label="LogProj
+[1,0]" , color = blue] ; 
+39 -> 40 ; 
+41 [label="LogSkolemFunctionCall
+(<https://www.starwars.com/databank/{1}>, <https://www.starwars.com/databank/{0}>)" , color = blue] ; 
+40 -> 41 ; 
+42 [label="LogSQLEval 
+select character, saber from lightsaber", color = blue] ; 
+41 -> 42 ; 
+44 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/Vehicle>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 44 ; 
+45 [label="LogProj
+[]" , color = blue] ; 
+44 -> 45 ; 
+46 [label="null 
+null", color = blue] ; 
+45 -> 46 ; 
+48 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>\", \"<https://www.starwars.com/databank/uses>\")}" , color = blue] ; 
+1 -> 48 ; 
+49 [label="LogProj
+[]" , color = blue] ; 
+48 -> 49 ; 
+50 [label="null 
+null", color = blue] ; 
+49 -> 50 ; 
+52 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/usesWeapon>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 52 ; 
+53 [label="LogProj
+[]" , color = blue] ; 
+52 -> 53 ; 
+54 [label="null 
+null", color = blue] ; 
+53 -> 54 ; 
+56 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Object>\")}" , color = blue] ; 
+1 -> 56 ; 
+57 [label="LogProj
+[]" , color = blue] ; 
+56 -> 57 ; 
+58 [label="null 
+null", color = blue] ; 
+57 -> 58 ; 
+60 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/StarShip>\", \"<http://www.w3.org/2000/01/rdf-schema#subClassOf>\", \"<https://www.starwars.com/databank/Vehicle>\")}" , color = blue] ; 
+1 -> 60 ; 
+61 [label="LogProj
+[]" , color = blue] ; 
+60 -> 61 ; 
+62 [label="null 
+null", color = blue] ; 
+61 -> 62 ; 
+64 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/usesWeapon>\", \"<http://www.w3.org/2000/01/rdf-schema#subPropertyOf>\", \"<https://www.starwars.com/databank/uses>\")}" , color = blue] ; 
+1 -> 64 ; 
+65 [label="LogProj
+[]" , color = blue] ; 
+64 -> 65 ; 
+66 [label="null 
+null", color = blue] ; 
+65 -> 66 ; 
+68 [label="LogFunctionCall
+AddConstant{0=(\"<https://www.starwars.com/databank/pilotOf>\", \"<http://www.w3.org/2000/01/rdf-schema#range>\", \"<https://www.starwars.com/databank/Vehicle>\")}" , color = blue] ; 
+1 -> 68 ; 
+69 [label="LogProj
+[]" , color = blue] ; 
+68 -> 69 ; 
+70 [label="null 
+null", color = blue] ; 
+69 -> 70 ; 
+}
+

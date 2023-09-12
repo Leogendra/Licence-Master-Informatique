@@ -1,0 +1,303 @@
+___________________________________
+Q1)
+Triplets ajoutés à l'ontologie :
+<https://www.starwars.com/databank/PodRacer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.starwars.com/databank/Vehicle> .
+<https://www.starwars.com/databank/uses> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.starwars.com/databank/Character> .
+
+Il n'est pas necessaire d'indiquer le domaine de "pilotOf" et "usesWeapon", car ce sont des sous-propriété de "uses" donc ils heritent du domaine "Character"
+
+___________________________________
+Q2)
+SELECT ?x ?z WHERE {
+  ?x sw:pilotOf ?y .
+  ?y rdf:type ?z .
+  ?z rdfs:subClassOf sw:vehicle .
+}
+
+Réponses :
+    1    sw:luke-skywalker      sw:StarShip
+    2    sw:rey                 sw:StarShip
+    3    sw:anakin-skywalker    sw:StarShip
+    4    sw:anakin-skywalker    sw:PodRacer
+
+___________________________________
+Q3)
+SELECT * WHERE {
+  ?movie imdb:title ?title .
+  ?movie imdb:releaseYear imdb:title\/1977 .
+}
+
+    {
+      "name": "title",
+      "head": [
+        ["$movie", "<http://www.imdb.com/title>", "$title"],
+        ["$movie", "<http://www.imdb.com/releaseYear>", "$anneeSortie"]
+      ],
+      "body": {
+        "templates": {
+          "title": "primarytitle",
+          "movie": "<http://www.imdb.com/title/{tconst}>",
+          "anneeSortie": "<http://www.imdb.com/title/{startYear}>"
+        },
+        "query": "select tconst, primarytitle, startYear from title",
+        "datasource": "SW_IMDB"
+      }
+    }
+
+Réponse :
+    imdb:title/tt0076759    Star Wars: Episode IV - A New Hope
+
+___________________________________
+Q4)
+    {
+      "name": "actress",
+      "head": [["$actress", "<http://www.imdb.com/actressIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "actress": "<http://www.imdb.com/name/{nconst}>",
+          "movie": "<http://www.imdb.com/title/{tconst}>"
+        },
+        "query": "select nconst, tconst from casting where category='actress'",
+        "datasource": "SW_IMDB"
+      }
+    },
+    {
+      "name": "actor",
+      "head": [["$actor", "<http://www.imdb.com/maleActorIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "actor": "<http://www.imdb.com/name/{nconst}>",
+          "movie": "<http://www.imdb.com/title/{tconst}>"
+        },
+        "query": "select nconst, tconst from casting where category='actor'",
+        "datasource": "SW_IMDB"
+      }
+    },
+
+Résultats :
+actressIn :
+    Daisy Ridley
+    Carrie Fisher
+    Natalie Portman
+    Felicity Jones
+
+maleActorIn :
+    John Boyega
+    Harrison Ford
+    Mark Hamill
+    Hayden Christensen
+    Ewan McGregor
+    Adam Driver
+    Alec Guinness
+    Billy Dee Williams
+    Jake Lloyd
+    Liam Neeson
+    Christopher Lee
+    James Earl Jones
+    Spencer Wilding
+
+___________________________________
+Q5)
+Triplets ajoutés à l'ontologie :
+<http://www.imdb.com/actressIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.imdb.com/actorIn> .
+<http://www.imdb.com/maleActorIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.imdb.com/actorIn> .
+
+Requête :
+    SELECT ?n WHERE {
+        ?a imdb:fullName ?n .
+        ?a imdb:actorIn ?m .
+    }
+
+Résultat :
+    Adam Driver
+    Alec Guinness
+    Billy Dee Williams
+    Carrie Fisher
+    Christopher Lee
+    Daisy Ridley
+    Ewan McGregor
+    Felicity Jones
+    Harrison Ford
+    Hayden Christensen
+    Jake Lloyd
+    James Earl Jones
+    John Boyega
+    Liam Neeson
+    Mark Hamill
+    Natalie Portman
+    Spencer Wilding
+
+___________________________________
+Q6)
+    {
+      "name": "plays",
+      "head": [["$actor", "<http://www.imdb.com/plays>", "$character"]],
+      "body": {
+        "templates": {
+          "actor": "<http://www.imdb.com/name/{nconst}>",
+          "character": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select nconst, character from casting where category in ('actor', 'actress')",
+        "datasource": "SW_IMDB"
+      }
+    },
+
+Réponses :
+    ?actorName                 ?plays
+    Mark Hamill                sw:luke-skywalker
+    Daisy Ridley               sw:rey
+    Hayden Christensen         sw:anakin-skywalker
+    Jake Lloyd                 sw:anakin-skywalker
+
+___________________________________
+Q7)
+1. Oui, cette requête marche dans cette base de donnée
+2. Non, car on a défini le mapping "plays" avec "<https://www.starwars.com/databank/{character}>"
+3. On créer ce mapping :
+    {
+      "name": "characterIn",
+      "head": [["$character", "<http://www.imdb.com/characterIn>", "$movie"]],
+      "body": {
+        "templates": {
+          "movie": "<http://www.imdb.com/title/{tconst}>",
+          "character": "<https://www.starwars.com/databank/{character}>"
+        },
+        "query": "select tconst, character from casting where category in ('actor', 'actress')",
+        "datasource": "SW_IMDB"
+      }
+    },
+
+et on utilise cette requête :
+    SELECT ?character ?title WHERE { 
+        ?character imdb:characterIn ?movie .
+        ?movie imdb:title ?title .
+    }
+
+
+On obtient le résultat suivant :
+1
+sw:finn
+Star Wars: Episode VII - The Force Awakens
+2
+sw:han-solo
+Star Wars: Episode V - The Empire Strikes Back
+3
+sw:luke-skywalker
+Star Wars: Episode IX - The Rise of Skywalker
+4
+sw:rey
+Star Wars: Episode VII - The Force Awakens
+5
+sw:leia-organa
+Star Wars: Episode VI - Return of the Jedi
+6
+sw:anakin-skywalker
+Star Wars: Episode II - Attack of the Clones
+7
+sw:obi-wan-kenobi
+Star Wars: Episode I - The Phantom Menace
+8
+sw:kylo-ren
+Star Wars: Episode IX - The Rise of Skywalker
+9
+sw:queen-amidala
+Star Wars: Episode I - The Phantom Menace
+10
+sw:obi-wan-kenobi
+Star Wars: Episode IV - A New Hope
+11
+sw:finn
+Star Wars: Episode VIII - The Last Jedi
+12
+sw:leia-organa
+Star Wars: Episode VIII - The Last Jedi
+13
+sw:lando-calrissian
+Star Wars: Episode VI - Return of the Jedi
+14
+sw:obi-wan-kenobi
+Star Wars: Episode III - Revenge of the Sith
+15
+sw:anakin-skywalker
+Star Wars: Episode III - Revenge of the Sith
+16
+sw:leia-organa
+Star Wars: Episode V - The Empire Strikes Back
+17
+sw:han-solo
+Star Wars: Episode VI - Return of the Jedi
+18
+sw:obi-wan-kenobi
+Star Wars: Episode II - Attack of the Clones
+19
+sw:leia-organa
+Star Wars: Episode IV - A New Hope
+20
+sw:padmé
+Star Wars: Episode II - Attack of the Clones
+21
+sw:luke-skywalker
+Star Wars: Episode VI - Return of the Jedi
+22
+sw:anakin-skywalker
+Star Wars: Episode I - The Phantom Menace
+23
+sw:luke-skywalker
+Star Wars: Episode VIII - The Last Jedi
+24
+sw:rey
+Star Wars: Episode IX - The Rise of Skywalker
+25
+sw:qui-gon-jinn
+Star Wars: Episode I - The Phantom Menace
+26
+sw:lando-calrissian
+Star Wars: Episode V - The Empire Strikes Back
+27
+sw:count-dooku
+Star Wars: Episode II - Attack of the Clones
+28
+sw:luke-skywalker
+Star Wars: Episode IV - A New Hope
+29
+sw:padmé
+Star Wars: Episode I - The Phantom Menace
+30
+sw:padmé
+Star Wars: Episode III - Revenge of the Sith
+31
+sw:han-solo
+Star Wars: Episode IV - A New Hope
+32
+sw:rey
+Star Wars: Episode VIII - The Last Jedi
+33
+sw:luke-skywalker
+Star Wars: Episode V - The Empire Strikes Back
+34
+sw:jyn-erso
+Rogue One: A Star Wars Story
+35
+sw:darth-vader
+Star Wars: Episode VI - Return of the Jedi
+36
+sw:darth-vader
+Star Wars: Episode IV - A New Hope
+37
+sw:darth-vader
+Star Wars: Episode V - The Empire Strikes Back
+38
+sw:darth-vader
+Rogue One: A Star Wars Story
+
+
+___________________________________
+Q8)
+
+
+___________________________________
+Q9)
+On cherche le nom des acteurs qui ont joué dans "Star Wars Episode IV"
+Il y a 3 refomulation et 2 réécritures
+- Les reformulation sont obtenues en prennat "maleActorIn", "actressIn" ou "actorIn"
+- les réecritures diffèrent de "actressIn" et "actorIn"
