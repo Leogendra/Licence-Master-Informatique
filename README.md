@@ -1,4 +1,4 @@
-## Faculté des sciences des Sciences - Licence-Informatique-Master-IASD | 2019-2023
+## Faculté des sciences des Sciences - Licence Informatique/Master IASD | 2019-2023
 
 Ce répertoire contient les cours, les exercices des TDs et TPs et parfois des corrections des UEs du parcours informatique de l'Université de Montpellier, de la L2 au M2 IASD.
 
